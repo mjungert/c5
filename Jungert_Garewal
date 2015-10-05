@@ -1,0 +1,23 @@
+void setup() {
+  size(254, 254);
+  //sets up size of program
+}
+
+void draw() {
+  smooth();
+  strokeWeight(4);
+  //determines weight of lines
+  for (int y = 5; y <= height; y += 10) {
+    //initializes variable so that it = 5 and its going to be less than the size's height (255)
+    //y's value will increase by 10 with every loop
+    for (int x = 5; x <= width; x += 10) {
+      // intializes varaible so that it = 5 and will be less than the size's width (255)
+      //x's value will increase by 10 every loop
+      stroke(x, y, 255-x);
+      // R value is x, G value is y, and the blue value is 255 - x
+      // Because the variables' values change every loop, so will the RGB value
+      point(x, y);
+      // Create a colorful point determined by the two variables
+    }
+  }
+}
